@@ -1,3 +1,3 @@
-book-test-grunt
+object-testing-assignment
 ===============
 quick unit test for an object
