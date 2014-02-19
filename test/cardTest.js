@@ -19,9 +19,9 @@
 //  c) How many cards in total is the same as dealt cards + cards in deck
 
 var chai = require('chai');
-var Card = require('../lib/card').Card;
-var Deck = require('../lib/deck').Deck;
 var expect = chai.expect;
+var Card = require('../lib/card');
+var Deck = require('../lib/deck');
 
 describe('As a user, I receive the card from the deck and expect that', function(){
 
@@ -50,7 +50,7 @@ function _Fn(val){
     describe('As a dealer, I determine how many cards have been dealt from the deck based on', function(){
 
       beforeEach(function(){
-        deck = new Deck();
+        deck = new Deck(Card);
         deck.dealCard();
       });
 
