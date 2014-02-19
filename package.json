@@ -1,0 +1,24 @@
+{
+  "name": "cardtest",
+  "version": "0.0.0",
+  "description": "book-test-grunt =============== quick unit test for an object",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cvince/book-test-grunt.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cvince/book-test-grunt/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "chai": "~1.9.0",
+    "grunt-simple-mocha": "~0.4.0",
+    "grunt-contrib-jshint": "~0.8.0"
+  }
+}
