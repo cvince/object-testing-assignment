@@ -47,7 +47,6 @@ describe('As a user, I receive the card from the deck and expect that', function
 
 
 var myDeck = new Deck(Card);
-var myCards = myDeck.countDeck();
 
 function _Fn(val){
 
@@ -55,24 +54,24 @@ function _Fn(val){
 
 
       var cardCount = 0;
+      var dealtCount = 0;
 
-      beforeEach(function(){
-        myDeck.dealCard();
-        cardCount = myDeck.countDeck();
-      });
+      myDeck.dealCard();
+      cardCount = myDeck.countDeck();
+      dealtCount = myDeck.countDealt();
 
 
       it('the number of cards are left in the deck', function(){
-        expect(cardCount).to.equal(52);
+        expect(cardCount).to.equal(51-val);
       });
 
-      // it('the number of cards dealt from the deck', function(){
-      //   expect(myDeck.countDealt()).to.equal(1);
-      // });
+      it('the number of cards dealt from the deck', function(){
+        expect(dealtCount).to.equal(val+1);
+      });
 
-      // it('the sum of the cards dealt and the cards left in the deck', function(){
-      //   expect(myDeck.countDeck() + myDeck.countDealt()).to.equal(52);
-      // });
+      it('the sum of the cards dealt and the cards left in the deck', function(){
+        expect(cardCount + dealtCount).to.equal(52);
+      });
 
     });
 
