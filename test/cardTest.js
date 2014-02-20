@@ -62,11 +62,11 @@ function _Fn(val){
 
 
       it('the number of cards are left in the deck', function(){
-        expect(cardCount).to.equal(51-val);
+        expect(cardCount).to.equal(52-val);
       });
 
       it('the number of cards dealt from the deck', function(){
-        expect(dealtCount).to.equal(val+1);
+        expect(dealtCount).to.equal(val);
       });
 
       it('the sum of the cards dealt and the cards left in the deck', function(){
