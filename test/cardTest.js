@@ -52,14 +52,13 @@ function _Fn(val){
 
     describe('As a dealer, I determine how many cards have been dealt from the deck based on', function(){
 
+      myDeck.dealCard();
 
       var cardCount = 0;
       var dealtCount = 0;
 
-      myDeck.dealCard();
       cardCount = myDeck.countDeck();
       dealtCount = myDeck.countDealt();
-
 
       it('the number of cards are left in the deck', function(){
         expect(cardCount).to.equal(52-val);
